@@ -1,0 +1,68 @@
+<template name="Record">
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Record</h1>
+      <p>
+        This where you record shitty thing
+      </p>
+        <button type="button" class="startrecord btn btn-success btn-lg" data-toggle="modal" data-target=".record-stuff">Start</button>
+        <button type="button" class="stoprecord btn btn-danger btn-lg" disabled="true">Stop</button>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h4>Log</h4>
+          <pre id="log" class="pre-scrollable"></pre>
+        </div>
+    </div>
+  </div>
+
+  <div id="sumting" class="modal fade record-stuff" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h2>Create New Recording</h2>
+          <form>
+            <div class="form-group">
+            <input type="text" id="file-name" class="form-control" placeholder="Insert Name Here...">
+            <br>
+            <button type="submit" class="record-submit btn btn-success">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="jumbotron">
+    <div class="container">
+      <h1>Record</h1>
+        {{#if currentUser}}
+      <p>This's where you Forking record something</p>
+      <button type="button" class="startrecord btn btn-danger" data-toggle="modal" data-target=".start-record">Start Record</button>
+      <button type="button" class="btn btn-danger">Stop</button>
+    </div>
+  </div>
+    <div class="name-enter">
+      <label for="name">Name</label>
+      <input type="text" class="name" id="name" placeholder="Type Recording Name Here"/>
+    </div>
+
+    <button type ="button" class="startrecord">Record</button>
+    <button type ="button" class="stoprecord" disabled="true">Stop</button>
+    <ul id="recordingslist"></ul>
+    <h4>Log</h4>
+    <pre id="log"></pre>
+    <br>
+    <button type="button" class="clear-log"> Clear Log </button>
+  {{else}}
+    <p>You must be logged-in to see this content.</p>
+  {{/if}}
+
+  <div class="modal fade login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        {{> atForm}}
+      </div>
+    </div>
+  </div> -->
+</template>

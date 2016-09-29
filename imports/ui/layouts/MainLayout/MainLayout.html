@@ -1,0 +1,10 @@
+<template name="MainLayout">
+  {{> Header}}
+  <div class="sumting">
+    {{> AppNav}}
+    <main class="main-layout">
+        {{> Template.dynamic template=main}}
+    </main>
+    {{> Footer}}
+  </div>
+</template>

@@ -1,0 +1,28 @@
+<template name="Header" class="landing">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">TalkTape</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <form class="navbar-form navbar-right">
+          {{#if currentUser}}
+          <button type="button" id="logout" class="btn btn-success">Logout</button>
+          {{else}}
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#login-modal">SignUp/LogIn</button>
+          {{/if}}
+        </form>
+      </div>
+    </div>
+  </nav>
+
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            {{> atForm}}
+          </div>
+        </div>
+      </div>
+    </div>
+</template>
